@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
+class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
    
 
     
@@ -17,14 +17,31 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var ResturantTextField: UITextField!
     
-    var newResturant: Restaurant?
+    var newRestaurant: Restaurant?
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        
+        
+        foodStylePicker.delegate = self
+        
+        foodStylePicker.dataSource = self
+        
+    }
+
     
     @IBAction func SaveButtonAction(_ sender: Any) {
-        let resturant = ResturantTextField.text
-        let style = foodStyles[foodStylePicker.selectedRow(inComponent: 0)]
-        performSegue(withIdentifier: "unwindToTableView", sender: self)
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            super.prepare(for: segue, sender: sender)
+            
+            guard segue.identifier == "saveUnwind" else { return }
+            
+            let restaurant = ResturantTextField.text
+            let style = foodStyles[foodStylePicker.selectedRow(inComponent: 0)]
+            performSegue(withIdentifier: "unwindToTableView", sender: self)
         
-        newResturant = Restaurant(name: resturant!, type: style)
+            newRestaurant = Restaurant(name: restaurant!, type: style)
+        }
         
         
     }
@@ -43,16 +60,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ foodStylePicker: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return foodStyles[row]
     }
-    override func viewDidLoad(){
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        foodStylePicker.delegate = self
-        
-        foodStylePicker.dataSource = self
     
-    }
-
 
 }
 

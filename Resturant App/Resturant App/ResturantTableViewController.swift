@@ -10,7 +10,18 @@ import UIKit
 
 class ResturantTableViewController: UITableViewController {
     
-    @IBAction func unwindToTableView(segue: UIStoryboardSegue){ }
+    
+    @IBAction func unwindToTableView(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveUnwind" else {return}
+        let sourceViewController = segue.source as! AddViewController
+        if let newRestaurant = sourceViewController.newRestaurant {
+            let newIndexPath = IndexPath(row: myRestaurants.count, section:0)
+            myRestaurants.append(newRestaurant)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+        Restaurant.saveToFile(restaurants: myRestaurants)
+    }
+    
     
     var myRestaurants = [Restaurant]()
 
@@ -100,5 +111,6 @@ class ResturantTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }
