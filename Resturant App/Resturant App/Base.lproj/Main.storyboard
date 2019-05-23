@@ -13,7 +13,7 @@
         <!--Add-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Resturant_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddViewController" customModule="Resturant_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,8 +37,7 @@
                     <navigationItem key="navigationItem" title="Add" id="J5j-G2-UbS">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="OBq-xn-HGl">
                             <connections>
-                                <action selector="SaveButtonAction:" destination="BYZ-38-t0r" id="YDP-pn-0bi"/>
-                                <segue destination="2Xx-MT-xxd" kind="unwind" unwindAction="unwindToTableViewWithSegue:" id="9ew-Rm-DFa"/>
+                                <segue destination="2Xx-MT-xxd" kind="unwind" unwindAction="unwindToTableViewWithSegue:" id="RLJ-JY-Rty"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -106,20 +105,30 @@
         <!--Select-->
         <scene sceneID="Y3W-FV-tPG">
             <objects>
-                <viewController id="Nw4-Fm-zD4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mju-xb-G14">
+                <viewController id="Nw4-Fm-zD4" customClass="SelectViewController" customModule="Resturant_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mju-xb-G14" customClass="Select">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDg-tK-uU4">
+                                <rect key="frame" x="146" y="383" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select Restaurant"/>
+                                <connections>
+                                    <action selector="openAlert:" destination="fSW-O5-Tpm" eventType="touchUpInside" id="WS3-Tz-MIw"/>
+                                    <action selector="selectRestaurant:" destination="Nw4-Fm-zD4" eventType="touchUpInside" id="edx-0M-BTe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GEJ-7k-2O9"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select" id="WMa-BA-ZQG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Pd6-Bc-JQs"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Select" id="WMa-BA-ZQG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUP-MX-Ke7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fSW-O5-Tpm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="-133"/>
+            <point key="canvasLocation" x="2211.594202898551" y="-133.25892857142856"/>
         </scene>
         <!--Home-->
         <scene sceneID="HNa-Bp-XUo">

@@ -9,12 +9,38 @@
 import UIKit
 
 class SelectViewController: UIViewController {
-
+    
+    var myRestaurants = [Restaurant]()
+    var randomRestaurant: Restaurant?
+    
+    
+    func sendAlert() {
+        let alert = UIAlertController(title: "Here is your Restaurant:", message: randomRestaurant!.name, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func selectRestaurant(_ sender: Any) {
+        sendAlert()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let sample = Restaurant.loadFromFile() {
+            myRestaurants = sample
+        } else {
+            myRestaurants = Restaurant.loadSampleRestaurants()
+        }
+        
+        randomRestaurant = myRestaurants[Int.random(in: 0 ... (myRestaurants.count))]
 
         // Do any additional setup after loading the view.
     }
+    
+
     
 
     /*

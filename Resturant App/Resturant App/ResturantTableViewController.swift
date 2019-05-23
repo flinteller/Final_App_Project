@@ -12,7 +12,6 @@ class ResturantTableViewController: UITableViewController {
     
     
     @IBAction func unwindToTableView(segue: UIStoryboardSegue) {
-        guard segue.identifier == "saveUnwind" else {return}
         let sourceViewController = segue.source as! AddViewController
         if let newRestaurant = sourceViewController.newRestaurant {
             let newIndexPath = IndexPath(row: myRestaurants.count, section:0)
@@ -40,6 +39,17 @@ class ResturantTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+        emojis.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+     }
+        Emoji.saveToFile(emojis: emojis)
+     }
+    
+    
 
     // MARK: - Table view data source
 

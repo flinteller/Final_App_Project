@@ -30,21 +30,20 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
 
     
-    @IBAction func SaveButtonAction(_ sender: Any) {
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             super.prepare(for: segue, sender: sender)
-            
-            guard segue.identifier == "saveUnwind" else { return }
+
             
             let restaurant = ResturantTextField.text
             let style = foodStyles[foodStylePicker.selectedRow(inComponent: 0)]
-            performSegue(withIdentifier: "unwindToTableView", sender: self)
+        
         
             newRestaurant = Restaurant(name: restaurant!, type: style)
         }
         
         
-    }
+ 
     
     
     let foodStyles = ["Italian", "Asian", "BBQ", "Mexican", "Fast Food", "Steakhouse", "Seafood", "Mediterranean", "Diner", "Pub", "Bistro","Dessert", "Other"]
