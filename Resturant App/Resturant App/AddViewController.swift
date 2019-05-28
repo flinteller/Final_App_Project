@@ -46,7 +46,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
  
     
     
-    let foodStyles = ["Italian", "Asian", "BBQ", "Mexican", "Fast Food", "Steakhouse", "Seafood", "Mediterranean", "Diner", "Pub", "Bistro","Dessert", "Other"]
+    let foodStyles = ["Italian", "Asian", "BBQ", "Mexican", "Fast Food", "Steakhouse", "Seafood", "Brunch", "Mediterranean", "Diner", "Pub", "Bistro","Dessert", "Other"]
     
     func numberOfComponents(in foodStylePicker: UIPickerView) -> Int {
         return 1
