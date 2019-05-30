@@ -4,7 +4,7 @@
 //
 //  Created by Flint on 4/25/19.
 //  Copyright © 2019 Flint. All rights reserved.
-//
+//  This file selects and displays a random restaurant from the list in an alert
 
 import UIKit
 
@@ -26,7 +26,7 @@ class SelectViewController: UIViewController {
         sendAlert()
     }
     
-    
+    //  Below function selects random restaurant
     override func viewDidLoad() {
         super.viewDidLoad()
         if let sample = Restaurant.loadFromFile() {

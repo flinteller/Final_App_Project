@@ -205,13 +205,16 @@
 				TargetAttributes = {
 					F32D3329225D1CA9001C4CE1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					F32D333D225D1CAA001C4CE1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = F32D3329225D1CA9001C4CE1;
 					};
 					F32D3348225D1CAA001C4CE1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = F32D3329225D1CA9001C4CE1;
 					};
 				};
@@ -449,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YDLHY859C;
 				INFOPLIST_FILE = "Resturant App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,7 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Resturant-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -466,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YDLHY859C;
 				INFOPLIST_FILE = "Resturant App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,7 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Resturant-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -492,7 +497,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Resturant-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Resturant App.app/Resturant App";
 			};
@@ -512,7 +517,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Resturant-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Resturant App.app/Resturant App";
 			};
@@ -531,7 +536,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Resturant-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Resturant App";
 			};
@@ -550,7 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ssfs.Resturant-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Resturant App";
 			};

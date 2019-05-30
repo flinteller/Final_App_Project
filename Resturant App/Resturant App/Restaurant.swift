@@ -4,7 +4,7 @@
 //
 //  Created by Flint on 4/11/19.
 //  Copyright © 2019 Flint. All rights reserved.
-//
+//  This file creates a struct for my restaurants, creates a list a of sample restaurant, and creates the neccessary functions for saving and loading information
 
 import Foundation
 
@@ -23,7 +23,7 @@ struct Restaurant: Codable {
         let archiveURL = documentsDirectory.appendingPathComponent("RestaurantList").appendingPathExtension("plist")
         let propertyListEncoder = PropertyListEncoder()
         let encodedNote = try? propertyListEncoder.encode(restaurants)
-        try? encodedNote?.write(to: archiveURL, options: .noFileProtection)
+        ((try? encodedNote?.write(to: archiveURL, options: .noFileProtection)) as ()??)
         
         
     }

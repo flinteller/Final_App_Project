@@ -5,7 +5,8 @@
 //  Created by Flint on 4/9/19.
 //  Copyright © 2019 Flint. All rights reserved.
 //
-// Instruction for pickerView from: https://www.ioscreator.com/tutorials/picker-view-ios-tutorial-ios10
+//  Instruction for pickerView from: https://www.ioscreator.com/tutorials/picker-view-ios-tutorial-ios10
+//  This file sets up my picker and text field, gets the information from them and passes it o the table view controller
 
 import UIKit
 
